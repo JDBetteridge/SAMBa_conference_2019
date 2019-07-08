@@ -1,6 +1,6 @@
 ## [Efficient solvers for semi-implicit hybridised DG methods in fluid dynamics](https://jdbetteridge.github.io/SAMBa_conference_2019)
 #### Presented by: Jack Betteridge, Dept of Mathematical Sciences
-#### Co-authors: Thomas Gibson, Ivan Graham, Lawrence Mitchell, Eike Müller
+#### Co-authors: Colin Cotter, Thomas Gibson, Ivan Graham, Lawrence Mitchell, Eike Müller
 
 For problems in Numerical Weather Prediction (NWP), time to solution is a critical factor.
 Semi-implicit time-stepping methods can speed up geophysical fluid dynamics simulations by taking larger time-steps than explicit methods.
