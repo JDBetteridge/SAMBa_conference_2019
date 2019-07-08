@@ -1,0 +1,27 @@
+dist: xenial
+language: python
+python:
+  - "3.7"
+
+install:
+  - pip install nbfancy
+
+script:
+  - nbfancy render
+  - nbfancy html
+  - cp nbfancy/slides.ipynb html/
+  - sed -i 's/\.\.\/images/\.\/images/g' html/slides.ipynb
+  - jupyter nbconvert html/slides.ipynb --to slides
+  - mv html/slides.slides.html html/index.html
+
+deploy:
+  provider: pages
+  repo: JDBetteridge/hpc_symposium_2019
+  target-branch: gh-pages
+  local-dir: html
+  github_token: $GITHUB_TOKEN
+  skip-cleanup: true
+  on:
+    branch: master
+    python: 3.7
+
